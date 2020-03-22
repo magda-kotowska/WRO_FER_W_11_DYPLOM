@@ -18,6 +18,26 @@
   font-feature-settings: 'liga';
 }
 
+.material-icons {
+  cursor: pointer;
+  display: inline-block;
+  direction: ltr;
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  line-height: 1;
+  margin-left: 1em;
+  text-transform: none;
+  transition: 0.15s ease-out;
+  white-space: nowrap;
+  vertical-align: middle;
+}
+
+.material-icons:hover {
+  color: var(--main-color);
+  transform: scale(1.75);
+  transition: 0.25s ease-out;
+}
+
 /* variables */
 
 :root {
@@ -92,7 +112,7 @@ footer {
   text-transform: uppercase;
 }
 
-header. #to-do-form input:focus,#to-do-form button:focus{
+header. #to-do-form input:focus, #to-do-form button:focus{
   outline:none;
 }
 
@@ -131,17 +151,7 @@ header. #to-do-form input:focus,#to-do-form button:focus{
   width: 400px;
 }
 
-.newTask .material-icons {
-  cursor: pointer;
-  margin-left: 1em;
-  transition: 0.15s ease-out;
-}
 
-.newTask .material-icons:hover {
-  color: var(--main-color);
-  transform: scale(1.75);
-  transition: 0.25s ease-out;
-}
 
 /* flex */
 
