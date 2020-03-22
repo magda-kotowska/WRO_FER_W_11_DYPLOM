@@ -112,7 +112,7 @@ footer {
   text-transform: uppercase;
 }
 
-header. #to-do-form input:focus, #to-do-form button:focus{
+.header #to-do-form input:focus, #to-do-form button:focus, .newTask:focus{
   outline:none;
 }
 

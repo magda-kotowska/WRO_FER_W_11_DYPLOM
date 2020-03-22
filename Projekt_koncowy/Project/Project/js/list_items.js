@@ -11,7 +11,7 @@ function ListItems(props){
                id={item.key} 
                value={item.text} 
                onChange ={
-                   (e) =>{props.setUpdate(e.target.value, item.key)}
+                   (e) =>{props.setText(e.target.value, item.key)}
                }
                />
                 <span className="material-icons" onClick={()=>props.deleteItem(item.key)}>delete</span>
