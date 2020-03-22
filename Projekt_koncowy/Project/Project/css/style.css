@@ -1,0 +1,283 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,700);
+@import url(https://fonts.googleapis.com/icon?family=Material+Icons);
+@import url(https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic|Roboto+Mono:400,500|Material+Icons);
+
+.chevron {
+  display: inline-block;
+  direction: ltr;
+  font-family: 'Material Icons', serif;
+  font-style: normal;
+  line-height: 1;
+  text-transform: none;
+  white-space: nowrap;
+  vertical-align: middle;
+
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'liga';
+}
+
+/* variables */
+
+:root {
+  --bg-color: #fff;
+  --border-color: #eee;
+  --hover-color: rgb(231, 228, 228);
+  --main-color: rgb(111, 137, 160);
+  --text-color: rgb(73, 72, 72);
+  --text-color-light: rgb(167, 166, 166);
+}
+
+/* general */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    font-family: 'Open Sans', 'Helvetica', 'Arial', sans-serif;
+    font-size: 1em;
+    font-weight: 300;
+    line-height: 1.5;
+    position: relative;
+}
+
+header {
+  background: var(--bg-color);
+  border-bottom: 1px solid var(--border-color);
+  display: block;
+  padding: 1.75em 0;
+  width: 100%;
+}
+
+footer {
+  background: var(--bg-color);
+  border-top: 1px solid var(--border-color);
+  display: block;
+  padding: 1.75em 0;
+  width: 100%;
+}
+
+/* header */
+
+.header {
+  align-content: center;
+  background-color: var(--main-color);
+  border: 1px solid var(--border-color);
+  display: grid;
+  height: 100px;
+  margin-left: 260px;
+  position: relative;
+  text-transform: uppercase;
+  width: 1000px;
+}
+
+.header #to-do-form input {
+  background-color: rgb(122, 148, 170);
+  border:0;
+  color: var(--bg-color);
+  font-size: 16px;
+  height: 50px;
+  margin: 20px;
+  padding: 0 20px;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.header #to-do-form input::placeholder{
+  color: var(--text-color-light);
+  text-transform: uppercase;
+}
+
+header. #to-do-form input:focus,#to-do-form button:focus{
+  outline:none;
+}
+
+#to-do-form button {
+  background-color:  rgb(122, 148, 170);
+  border: 0;
+  color: var(--bg-color);
+  cursor: pointer;
+  height: 30px;
+  text-transform: uppercase;
+  width: 60px;
+}
+
+/* newList */
+
+.newList {
+  align-content: center;
+  background-color: rgb(141, 164, 182);
+  border: 1px solid var(--border-color);
+  display: grid;
+  height: 150px;
+  margin-left: 260px;
+  position: relative;
+  text-transform: uppercase;
+  width: 1000px;
+}
+
+.list .newTask {
+  background-color: rgb(141, 164, 182);
+  border:0;
+  color: var(--bg-color);
+  font-size: 16px;
+  margin-left: 20px;
+  padding: 0 5px;
+  text-transform: uppercase;
+  width: 400px;
+}
+
+.newTask .material-icons {
+  cursor: pointer;
+  margin-left: 1em;
+  transition: 0.15s ease-out;
+}
+
+.newTask .material-icons:hover {
+  color: var(--main-color);
+  transform: scale(1.75);
+  transition: 0.25s ease-out;
+}
+
+/* flex */
+
+.row {
+  flex-direction: row;
+  flex-wrap: wrap;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+
+.row-middle {
+  align-items: center;
+}
+
+.col {
+  flex-grow: 1;
+  flex-basis: 0;
+  max-width: 100%;
+}
+
+.col-start {
+  justify-content: flex-start;
+  text-align: left;
+}
+
+.col-center {
+  justify-content: center;
+  text-align: center;
+}
+
+.col-end {
+  justify-content: flex-end;
+  text-align: right;
+}
+
+/* calendar */
+
+.calendar {
+  background: var(--bg-color);
+  border: 1px solid var(--border-color);
+  display: inline-block;
+  height: 100px;
+  margin-left: 260px;
+  margin-top: 30px;
+  position: relative;
+  width: 1000px;
+}
+
+.calendar .header {
+  background-color: rgb(201, 221, 238);
+  border-bottom: 1px solid var(--border-color);
+  font-size: 115%;
+  font-weight: 700;
+  padding: 1.5em 0;
+  text-transform: uppercase;
+}
+
+.calendar .header .chevron {
+  cursor: pointer;
+  transition: 0.15s ease-out;
+}
+
+.calendar .header .chevron:hover {
+  color: var(--main-color);
+  transform: scale(1.75);
+  transition: 0.25s ease-out;
+}
+
+.calendar .header .chevron:first-of-type {
+  margin-left: 1em;
+}
+
+.calendar .header .chevron:last-of-type {
+  margin-right: 1em;
+}
+
+.calendar .days {
+  background-color: aliceblue;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--text-color-light);
+  font-size: 70%;
+  font-weight: 400;
+  padding: 0.75em 0;
+  text-transform: uppercase;
+}
+
+.calendar .body .cell {
+  background: var(--bg-color);
+  border-right: 1px solid var(--border-color);
+  cursor: pointer;
+  height: 5em;
+  overflow: hidden;
+  position: relative;
+  transition: 0.25s ease-out;
+}
+
+.calendar .body .cell:hover {
+  background: var(--hover-color);
+  transition: 0.5s ease-out;
+}
+
+.calendar .body .selected {
+  background-color: aliceblue;
+  border-left: 10px solid transparent;
+}
+
+.calendar .body .row {
+  border-bottom: 1px solid var(--border-color);
+}
+
+.calendar .body .row:last-child {
+  border-bottom: none;
+}
+
+.calendar .body .cell:last-child {
+  border-right: none;
+}
+
+.calendar .body .cell .number {
+  font-size: 80%;
+  font-weight: 700;
+  line-height: 1;
+  position: absolute;
+  right: 0.75em;
+  top: 0.75em;
+}
+
+.calendar .body .disabled {
+  color: var(--text-color-light);
+  pointer-events: none;
+}
+
+.calendar .body .col {
+  flex-basis: calc(100%/7);
+  flex-grow: 0;
+  width: calc(100%/7);
+}
